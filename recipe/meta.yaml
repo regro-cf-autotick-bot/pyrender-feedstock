@@ -54,6 +54,7 @@ test:
     - pytest
   source_files:
     - tests
+    - examples
 
 about:
   home: https://github.com/mmatl/pyrender
