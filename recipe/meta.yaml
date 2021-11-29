@@ -48,6 +48,7 @@ test:
     - pyrender.platforms
   commands:
     - pip check
+    - pytest tests
   requires:
     - pip
     - pytest
