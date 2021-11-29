@@ -11,7 +11,7 @@ source:
   sha256: 284b2432bf6832f05c5216c4b979ceb514ea78163bf53b8ce2bdf0069cb3b92e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -50,6 +50,9 @@ test:
     - pip check
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
 
 about:
   home: https://github.com/mmatl/pyrender
