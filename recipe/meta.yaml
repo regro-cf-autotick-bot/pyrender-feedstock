@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyrender-{{ version }}.tar.gz
+  url: https://github.com/mmatl/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: 284b2432bf6832f05c5216c4b979ceb514ea78163bf53b8ce2bdf0069cb3b92e
 
 build:
