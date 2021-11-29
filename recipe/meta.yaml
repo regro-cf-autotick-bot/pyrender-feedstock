@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/mmatl/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 284b2432bf6832f05c5216c4b979ceb514ea78163bf53b8ce2bdf0069cb3b92e
+  sha256: cfdf0f681f7763247623c751606e7d3417e3472d5b0f32cfd0389abd207e0a4f
 
 build:
   number: 1
