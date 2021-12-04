@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyrender-{{ version }}.tar.gz
-  sha256: 284b2432bf6832f05c5216c4b979ceb514ea78163bf53b8ce2bdf0069cb3b92e
+  url: https://github.com/mmatl/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: cfdf0f681f7763247623c751606e7d3417e3472d5b0f32cfd0389abd207e0a4f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -48,8 +48,14 @@ test:
     - pyrender.platforms
   commands:
     - pip check
+    # Disabled due to https://github.com/mmatl/pyrender/issues/203
+    - pytest -k "not (test_meshes or test_offscreen)" tests
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
+    - examples
 
 about:
   home: https://github.com/mmatl/pyrender
