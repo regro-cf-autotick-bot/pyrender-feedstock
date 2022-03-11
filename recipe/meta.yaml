@@ -9,6 +9,8 @@ package:
 source:
   url: https://github.com/mmatl/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
   sha256: cfdf0f681f7763247623c751606e7d3417e3472d5b0f32cfd0389abd207e0a4f
+  patches:
+    - unpin_pyopengl.patch
 
 build:
   number: 1
