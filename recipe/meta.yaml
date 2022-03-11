@@ -29,6 +29,7 @@ requirements:
     - scipy
     - six
     - trimesh
+    - dataclasses
   run:
     - freetype-py
     - imageio
@@ -41,6 +42,7 @@ requirements:
     - scipy
     - six
     - trimesh
+    - dataclasses
 
 test:
   imports:
