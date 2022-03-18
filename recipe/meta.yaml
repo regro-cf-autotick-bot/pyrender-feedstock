@@ -38,7 +38,7 @@ requirements:
     - numpy
     - pillow
     - pyglet >=1.4.10
-    - pyopengl ==3.1.0
+    - pyopengl >=3.1.0
     - python  >=3.6
     - scipy
     - six
