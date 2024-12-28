@@ -13,7 +13,7 @@ source:
     - unpin_pyopengl.patch
 
 build:
-  number: 3
+  number: 4
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,7 +27,7 @@ requirements:
     - pip
     - pyglet >=1.4.10
     - pyopengl >=3.1.0
-    - python  >=3.6
+    - python {{ python_min }}
     - scipy
     - six
     - trimesh
@@ -40,7 +40,7 @@ requirements:
     - pillow
     - pyglet >=1.4.10
     - pyopengl >=3.1.0
-    - python  >=3.6
+    - python >={{ python_min }}
     - scipy
     - six
     - trimesh
@@ -57,6 +57,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   source_files:
     - tests
     - examples
